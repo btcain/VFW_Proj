@@ -1,7 +1,9 @@
 <!DOCTYPE html>
-<!Benjamin Cain
+<!--
+Benjamin Cain
 Web App Part 1
-Visual Frameworks 1302>
+Visual Frameworks 1302
+-->
 <html>
 	<head>
 		<meta charset="utf-8" />
@@ -11,31 +13,35 @@ Visual Frameworks 1302>
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
 		
 		<title>Rememer.me</title>
+		<link rel="stylesheet" type="text/css" href="css.css">
 	</head>
 	<body>
 	<header>
 	<h1>Remember Me</h1>
 	</header>
-	<fieldset>
-		<legend>Create a new post</legend>
+	<div id="container">
+	<div id="previewpost"></div>
+	<form name="form" onsubmit="subfun()">
+	<fieldset >
+		<legend><img src="images/newpost.png" /></legend>
 		<input type="hidden" name="id" value="postid">
 		<!Post ID will generate here>
 		<ul>
-			<li>Title: <input type="text"></li>
-			<li>Type: <select name="type">
+			<li>Title: <input id="title" type="text"></li>
+			<li>Type: <select id="type" name="type">
 				<option value="Idea">Idea</option>
 				<option value="Dream">Dream</option>
 				<option value="Life">Life</option>
 				<option value="Poetry">Poetry</option>
 				<option value="Lyrics">Lyrics</option>
 			</select></li>
-			<li>Category: <select name="category">
+			<li>Category: <select id="category" name="category">
 				<option value="Art">Art</option>
 				<option value="Books">Books</option>
-				<option value="Ent">Entertainment</option>
-				<option value="Exp">Experience</option>
-				<option value="Game">Gaming</option>
-				<option value="Tech">Technology</option>
+				<option value="Entertainment">Entertainment</option>
+				<option value="Experience">Experience</option>
+				<option value="Gaming">Gaming</option>
+				<option value="Technology">Technology</option>
 				<option value="Music">Music</option>
 				<option value="Politics">Politics</option>
 				<option value="Science">Science</option>
@@ -43,12 +49,20 @@ Visual Frameworks 1302>
 			</select></li>
 			<li>Date: <input type="date" id="date"></li>
 			<li>Significance: <input type="range" id="sig" min="1" max="10"></li>
-			<li>Content:<br/><textarea rows="6" cols="50"></textarea></li>
-			<li>Mark as favorite? <input type="checkbox" id="fav" value="true">
+			<li>Content:<br/><textarea id="content" rows="6" cols="50"></textarea></li>
+			<li>Mark as favorite? <input type="checkbox" id="fav" value="true"></li>
 		</ul>
 	</fieldset>
-	<p><input type="submit" value="submit"><br/>
-	<a href="#">Clear Form</a> <a href="#">View Form</a>
-	</p>
+	<div id="links">
+	<center>
+		<input id ="submit" class="button" type="button" value="Submit">
+		<input class="button" type="reset" value="Clear">
+		<input id ="pre" class="button" type="button" value="Preview">
+	</center>
+	</div>
+	</form>
+	<div id="suboutput"></div>
+	</div>
+	<script type="text/javascript" src="main.js"></script>
 	</body>
 </html>
