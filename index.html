@@ -13,16 +13,18 @@ Visual Frameworks 1302
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
 		
 		<title>Rememer.me</title>
-		<link rel="stylesheet" type="text/css" href="css.css">
+		<link rel="stylesheet" type="text/css" href="css/css.css">
 	</head>
 	<body>
 		<header>
 			<h1>Remember.me</h1>
+			<input type="hidden" id="page" value="index">
 		</header>
-		<p><a href="additem.html" class="button" id="addme">Create a new entry</a></p>
+		<p><a href="additem.html" class="button" id="addme">Create a new entry</a><input id="clear" type="submit" class="button" value="Delete All"></p>
+		<div id="editorconsole"></div>
 		<h2>Previous Posts</h2>
-		<div id="previousposts">Posts aren't working yet!</div>
-		<script type="text/javascript" src="main.js"></script>
+		<div id="previousposts"></div>
+		<script type="text/javascript" src="js/index.js"></script>
 		<script>caller();</script>
 	</body>
 </html>

@@ -10,14 +10,11 @@ I did not include the "for" loop that is supposed to loop through the keys and p
 Currently, all posts will overwrite your previous post.
 */
 
+function idgen(){
+	var newid = 0;
+		
+	}
 
-
-var mylocal = {};
-function caller(){
-	var container = document.getElementById("previousposts");
-	var retrievedObject = localStorage.getItem('newpost');
-	container.innerHTML = ("<article id='>" + JSON.parse(retrievedObject).id + "'>" + "<h3>" + JSON.parse(retrievedObject).title + "</h3>" + "<br>" + "Type: " + JSON.parse(retrievedObject).type + "<br>" + "Category: " + JSON.parse(retrievedObject).category + "<br>" + "Date: " + JSON.parse(retrievedObject).date + "<br>" + "Content: " +  "<p>" + JSON.parse(retrievedObject).content + "</p>"  + "<br>" + "Favorite: " + JSON.parse(retrievedObject).favorite + "</article>");
-}
 var newpost = {};
 	newpost.title = document.getElementById("title").value;
 	newpost.type = "";
@@ -26,8 +23,10 @@ var newpost = {};
 	newpost.signi = "";
 	newpost.content = "";
 	newpost.favorite = false;
-	newpost.id = Math.floor(Math.random()*9999999)
+	newpost.id = (localStorage.length + 1);
+
 	
+	console.log(newpost.id);
 var subbutton = document.getElementById("submit");
 var prebutton = document.getElementById("pre");
 
@@ -46,7 +45,7 @@ var displayconsole = function(){
 	article.appendChild(addart);
 	addart.innerHTML = ("<h3>" + newpost.title + "</h3>" + "<br>" + "Type: " + newpost.type + "<br>" + "Category: " + newpost.category + "<br>" + "Date: " + newpost.date + "<br>" + "Content: " + newpost.content + "<br>" + "Favorite: " + newpost.favorite);
 	console.log(newpost);
-	localStorage.setItem('newpost', JSON.stringify(newpost));
+	localStorage.setItem(newpost.id , JSON.stringify(newpost));
 	window.location = ("index.html");
 }
 
@@ -63,6 +62,13 @@ var preview = function(){
 	console.log(newpost);
 }
 
+function editpost(id){
+	var key = localStorage.key(id);
+	var retrievedObject = localStorage.getItem(key);
+	var obj = JSON.parse(retrievedObject);
+	newpost.id = obj.id
+	document.getElementById("title").value = obj.title;
+}
 
 
 
