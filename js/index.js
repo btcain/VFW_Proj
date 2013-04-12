@@ -1,4 +1,30 @@
-
+if (localStorage.length === 0){
+	var pop = confirm("There's nothing here! Would you like to make some test posts?")
+	if (pop == true){
+		var firstpost = {};
+	firstpost.title = "Hello World!";
+	firstpost.type = "Idea";
+	firstpost.category = "Entertainment";
+	firstpost.date = "03-02-2013";
+	firstpost.signi = "3";
+	firstpost.content = "This is your very first post!";
+	firstpost.favorite = false;
+	firstpost.id = (localStorage.length + 1);
+	localStorage.setItem(firstpost.id , JSON.stringify(firstpost));
+	
+	var secondpost = {};
+	secondpost.title = "Hello, again!";
+	secondpost.type = "Dream";
+	secondpost.category = "Entertainment";
+	secondpost.date = "03-02-2013";
+	secondpost.signi = "3";
+	secondpost.content = "This is your very second post!";
+	secondpost.favorite = true;
+	secondpost.id = (localStorage.length + 1);
+	localStorage.setItem(secondpost.id , JSON.stringify(secondpost));
+	
+	}
+}
 
 
 function caller(){
@@ -7,7 +33,7 @@ for(var i=0, j=localStorage.length; i<j; i++) {
 	var container = document.getElementById("previousposts");
 	var key = localStorage.key(i);
 	var retrievedObject = localStorage.getItem(key);
-	container.innerHTML = (container.innerHTML + ("<article id='" + JSON.parse(retrievedObject).id + "'>" + "<h3>" + JSON.parse(retrievedObject).title + "</h3>" + "<br>" + "Type: " + JSON.parse(retrievedObject).type + "<br>" + "Category: " + JSON.parse(retrievedObject).category + "<br>" + "Date: " + JSON.parse(retrievedObject).date + "<br>" + "Content: " +  "<p>" + JSON.parse(retrievedObject).content + "</p>"  + "<br>" + "Favorite: " + JSON.parse(retrievedObject).favorite + "<div id='editor'><input id='edit' type='button' class='button' value='Edit' onclick='editme(" + JSON.parse(retrievedObject).id + ")'><input id='delete' type='submit' class='button' value='Delete' onclick='localStorage.removeItem(" + JSON.parse(retrievedObject).id + ")'></div></article>"));
+	container.innerHTML = (container.innerHTML + ("<article id='" + JSON.parse(retrievedObject).id + "'><div class='favorite'><img src='images/"+ JSON.parse(retrievedObject).type + ".png' class='icon'><img src='images/"+ JSON.parse(retrievedObject).favorite +".png' class='icon'></div>"  + "<h3>" + JSON.parse(retrievedObject).title + "</h3>" + "<br>" + "Type: " + JSON.parse(retrievedObject).type + "<br>" + "Category: " + JSON.parse(retrievedObject).category + "<br>" + "Date: " + JSON.parse(retrievedObject).date + "<br>" +  "<p>" + JSON.parse(retrievedObject).content + "</p>"  + "<br>" + "<div id='editor'><input id='edit' type='button' class='button' value='Edit' onclick='editme(" + JSON.parse(retrievedObject).id + ")'><input id='delete' type='submit' class='button' value='Delete' onclick='localStorage.removeItem(" + JSON.parse(retrievedObject).id + ")'></div></article>"));
 }
 }
 
@@ -26,7 +52,8 @@ var editor = document.getElementById('editorconsole');
 editor.innerHTML = ("<iframe src='editor.html' width='100%' onload='editorsetup(" + id + ")'></iframe>")
 	
 }
-
+var Testobj = localStorage;
+console.log(JSON.stringify(Testobj));
 deletebutton.addEventListener("click", clearall);
 
 /*

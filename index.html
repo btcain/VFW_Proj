@@ -13,18 +13,43 @@ Visual Frameworks 1302
 		<meta name="viewport" content="user-scalable=no, width=device-width" />
 		
 		<title>Rememer.me</title>
-		<link rel="stylesheet" type="text/css" href="css/css.css">
+		<link rel="stylesheet" type="text/css" href="css/styles.css">
+		<link href='http://fonts.googleapis.com/css?family=Skranji' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
 		<header>
-			<h1>Remember.me</h1>
-			<input type="hidden" id="page" value="index">
+			<h1>Remember.me<input type="hidden" id="page" value="index"></h1>
+			<h1><input type="text" name="q" size="31" />
+  <input type="submit" class="nav" name="sa" value="Search" />
+  <select id="type" name="type" class="nav">
+  				<option value="">Search By Type</option>
+				<option value="Idea">Idea</option>
+				<option value="Dream">Dream</option>
+				<option value="Life">Life</option>
+				<option value="Poetry">Poetry</option>
+				<option value="Lyrics">Lyrics</option>
+				<option value="Art">Art</option>
+				<option value="Books">Books</option>
+				<option value="Entertainment">Entertainment</option>
+				<option value="Experience">Experience</option>
+				<option value="Gaming">Gaming</option>
+				<option value="Technology">Technology</option>
+				<option value="Music">Music</option>
+				<option value="Politics">Politics</option>
+				<option value="Science">Science</option>
+				<option value="Religion">Religion</option>
+			</select>
+		<button onclick="window.location.href='browse.html'" class="nav" id="addme">Browse</button><input id="clear" type="submit" class="nav" value="Delete All"></h1>
 		</header>
-		<p><a href="additem.html" class="button" id="addme">Create a new entry</a><input id="clear" type="submit" class="button" value="Delete All"></p>
+		<div id="containerr">
+		<p>
+		<!-- <button onclick="window.location.href='additem.html'" class="nav" id="addme">New Post</button> -->
+		<center><a href="additem.html"><img src="images/Banner.png" alt="New Post" width="100%"></a></center>
 		<div id="editorconsole"></div>
 		<h2>Previous Posts</h2>
 		<div id="previousposts"></div>
 		<script type="text/javascript" src="js/index.js"></script>
 		<script>caller();</script>
+		</div>
 	</body>
 </html>
