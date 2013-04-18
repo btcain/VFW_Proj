@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Remember Me</title>
+  <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/jquery.mobile-1.2.0.min.js"></script>
+  <script src="js/jquery.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/populate.js"></script>
+
+  
+</head>
+<body>
+  <!-- Home -->
+  <div data-role="page" data-theme="b" id="page1">
+      <div data-theme="b" data-role="header" data-position="fixed">
+          <h4>
+              Remember Me
+          </h4>
+          <div data-role="navbar" data-iconpos="left">
+              <ul>
+                  <li>
+                      <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                          Home
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page7" data-transition="fade" data-theme="" data-icon="plus">
+                          New
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page4" data-transition="fade" data-theme="" data-icon="grid">
+                          Browse
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <div data-role="fieldcontain">
+              <input name="" id="searchinput2" placeholder="" value="Search" type="search"
+              data-mini="true">
+          </div>
+      </div>
+      <div data-role="content">
+          <a href="#page7">
+              <div style=" text-align:center">
+                  <img style="width: 80%; height: 100%" src="images/Banner.png">
+              </div>
+          </a>
+          <div id="previousposts">
+              
+                       </div>
+<input id="clear" type="submit" class="nav" data-inline="true" data-icon="delete" data-iconpos="left" data-theme="c"  value="Delete All">                       
+      </div>
+      <div data-role="tabbar" data-iconpos="left" data-theme="a">
+          <ul>
+              <li>
+                  <a href="#page5" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  
+  <!-- New -->
+  <div data-role="page" data-theme="b" id="page7">
+      <div data-theme="b" data-role="header" data-position="fixed">
+          <h4>
+              Remember Me
+          </h4>
+          <div data-role="navbar" data-iconpos="left">
+              <ul>
+                  <li>
+                      <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                          Home
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page7" data-transition="fade" data-theme="" data-icon="plus">
+                          New
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page4" data-transition="fade" data-theme="" data-icon="grid">
+                          Browse
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      </div>
+      <div data-role="content">
+          <h3>
+              New Post
+          </h3>
+          <form id="newpost" name="newpost" onsubmit="displayconsole()">
+              <div data-role="fieldcontain">
+                  <label for="title">
+                      Title
+                  </label>
+                  <input name="" id="title" placeholder="" value="" type="text">
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="type">
+                      Type:
+                  </label>
+                  <select id="type" name="" data-mini="true">
+                      <option value="Idea">
+                          Idea
+                      </option>
+                      <option value="Dream">
+                          Dream
+                      </option>
+                      <option value="Life">
+                          Life
+                      </option>
+                      <option value="Poetry">
+                          Poetry
+                      </option>
+                      <option value="Lyrics">
+                          Lyrics
+                      </option>
+                  </select>
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="selectmenu2">
+                      Category:
+                  </label>
+                  <select id="selectmenu2" name="" data-mini="true">
+                      <option value="Art">
+                          Art
+                      </option>
+                      <option value="Books">
+                          Books
+                      </option>
+                      <option value="Entertainment">
+                          Entertainment
+                      </option>
+                      <option value="Gaming">
+                          Gaming
+                      </option>
+                      <option value="Technology">
+                          Technology
+                      </option>
+                      <option value="Music">
+                          Music
+                      </option>
+                      <option value="Politics">
+                          Politics
+                      </option>
+                      <option value="Science">
+                          Science
+                      </option>
+                      <option value="Religion">
+                          Religion
+                      </option>
+                  </select>
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="date">
+                      Date
+                  </label>
+                  <input name="" id="date" placeholder="" value="" type="date" data-mini="true">
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="slider1">
+                      Significance
+                  </label>
+                  <input id="slider1" type="range" name="slider" value="5" min="1" max="10"
+                  data-highlight="true" data-mini="true">
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="textarea1">
+                      Content
+                  </label>
+                  <textarea name="" id="textarea1" placeholder=""></textarea>
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="fav">
+                      Favorite?
+                  </label>
+                  <select name="toggleswitch1" id="fav" data-theme="b" data-role="slider"
+                  data-mini="true">
+                      <option value="false">
+                          Off
+                      </option>
+                      <option value="true">
+                          On
+                      </option>
+                  </select>
+              </div>
+              <input id="subme" type="button" data-inline="true" data-icon="check"
+              data-iconpos="left" value="Submit">
+              <a data-role="button" data-inline="true" data-rel="back" href="#page1"
+              data-icon="delete" data-iconpos="left">
+                  Cancel
+              </a>
+          </form>
+      </div>
+      <div data-role="tabbar" data-iconpos="left" data-theme="a">
+          <ul>
+              <li>
+                  <a href="#page5" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  
+  
+  <!-- Browse -->
+  <div data-role="page" data-theme="b" id="page4">
+      <div data-theme="b" data-role="header" data-position="fixed">
+          <h4>
+              Remember Me
+          </h4>
+          <div data-role="navbar" data-iconpos="left">
+              <ul>
+                  <li>
+                      <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                          Home
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page7" data-transition="fade" data-theme="" data-icon="plus">
+                          New
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page4" data-transition="fade" data-theme="" data-icon="grid">
+                          Browse
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <div data-role="fieldcontain">
+              <input name="" id="searchinput3" placeholder="" value="Search" type="search"
+              data-mini="true">
+          </div>
+      </div>
+      <div data-role="content" id="browsepage">
+          <div data-role="collapsible-set">
+              <div data-role="collapsible">
+                  <h3>
+                      Type
+                  </h3>
+                  <ul data-role="listview" data-divider-theme="b" data-inset="false">
+                      <li data-theme="c">
+                          <a href="#page1" id="browsetype" data-transition="slide">
+                              Idea
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" id="browsetype" data-transition="slide">
+                              Dream
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" id="browsetype" data-transition="slide">
+                              Life
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" id="browsetype" data-transition="slide">
+                              Poetry
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Lyrics
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div data-role="collapsible">
+                  <h3>
+                      Category
+                  </h3>
+                  <ul data-role="listview" data-divider-theme="b" data-inset="false">
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Art
+                              <span class="ui-li-count">
+                                  100
+                              </span>
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Books
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Entertainment
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Experience
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Gaming
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Technology
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Music
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Politics
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Religion
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div data-role="collapsible">
+                  <h3>
+                      Signifigance
+                  </h3>
+                  <ul data-role="listview" data-divider-theme="b" data-inset="false">
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              High (7-10)
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Medium (3-7)
+                          </a>
+                      </li>
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Low (1-3)
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+              <div data-role="collapsible">
+                  <h3>
+                      Favorites
+                  </h3>
+                  <ul data-role="listview" data-divider-theme="b" data-inset="false">
+                      <li data-theme="c">
+                          <a href="#page1" data-transition="slide">
+                              Favorites
+                          </a>
+                      </li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+      <div data-role="tabbar" data-iconpos="left" data-theme="a">
+          <ul>
+              <li>
+                  <a href="#page5" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  
+  
+  
+  
+  <!-- About -->
+  <div data-role="page" data-theme="b" id="page5">
+      <div data-theme="b" data-role="header" data-position="fixed">
+          <h4>
+              Remember Me
+          </h4>
+          <div data-role="navbar" data-iconpos="left">
+              <ul>
+                  <li>
+                      <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                          Home
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page7" data-transition="fade" data-theme="" data-icon="plus">
+                          New
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page4" data-transition="fade" data-theme="" data-icon="grid">
+                          Browse
+                      </a>
+                  </li>
+              </ul>
+          </div>
+          <div data-role="fieldcontain">
+              <input name="" id="searchinput4" placeholder="" value="Search" type="search"
+              data-mini="true">
+          </div>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-a">
+              <div class="ui-block-a">
+                  <a data-role="button" target="_blank" href="http://github.com/btcain">
+                      Github
+                  </a>
+              </div>
+              <div class="ui-block-b">
+                  <a data-role="button" href="#page5">
+                      Credits
+                  </a>
+              </div>
+              <div class="ui-block-a">
+                  <a data-role="button" href="#page5">
+                      Gold App
+                  </a>
+              </div>
+              <div class="ui-block-b">
+                  <a data-role="button" target="_blank" href="../BRONZE/index.html">
+                      Bronze App
+                  </a>
+              </div>
+          </div>
+      </div>
+      <div data-role="tabbar" data-iconpos="left" data-theme="a">
+          <ul>
+              <li>
+                  <a href="#page5" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+  
+</body>
+<script>caller();</script>
+<script src="js/main.js"></script>
+  <script src="js/edit.js"></script>
+
+</html>

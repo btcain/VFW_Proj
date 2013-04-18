@@ -8,8 +8,9 @@ function editorsetup(id){
 	document.getElementById("title").value = obj.title;
 	document.getElementById("type").value = obj.type;
 	document.getElementById("category").value = obj.category;
+	
+	window.location("app.html#page7");
 }
-
 
 var newpost = {};
 	newpost.title = document.getElementById("title").value;
@@ -19,7 +20,7 @@ var newpost = {};
 	newpost.signi = "";
 	newpost.content = "";
 	newpost.favorite = false;
-	newpost.id = (localStorage.length + 1);
+	newpost.id = "";
 
 	
 	console.log(newpost.id);
@@ -28,7 +29,7 @@ var prebutton = document.getElementById("pre");
 
 var posts = [];
 
-var displayconsole = function(){
+var newconsole = function(){
 	newpost.title = document.getElementById("title").value;
 	newpost.type = document.getElementById("type").value;
 	newpost.category = document.getElementById("category").value;
@@ -45,23 +46,9 @@ var displayconsole = function(){
 	window.location = ("index.html");
 }
 
-var preview = function(){
-	newpost.title = document.getElementById("title").value;
-	newpost.type = document.getElementById("type").value;
-	newpost.category = document.getElementById("category").value;
-	newpost.date = document.getElementById("date").value;
-	newpost.signi = document.getElementById("sig").value;
-	newpost.content = document.getElementById("content").value;
-	newpost.favorite = document.getElementById("fav").value;
-	var article = document.getElementById("previewpost");
-	article.innerHTML = ("<h3>" + newpost.title + "</h3>" + "<br>" + "Type: " + newpost.type + "<br>" + "Category: " + newpost.category + "<br>" + "Date: " + newpost.date + "<br>" + "Content: " + newpost.content + "<br>" + "Favorite: " + newpost.favorite);
-	console.log(newpost);
-}
-
 
 
 
 
 console.log(posts);
-prebutton.addEventListener("click", preview);
-subbutton.addEventListener("click", displayconsole);
+subbutton.addEventListener("click", newconsole);

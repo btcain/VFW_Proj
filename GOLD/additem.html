@@ -1,0 +1,162 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+  <title>Remember Me</title>
+  <link rel="stylesheet" href="css/jquery.mobile-1.2.0.min.css" />
+  <link rel="stylesheet" href="css/main.css" />
+  <script src="js/jquery-1.7.2.min.js"></script>
+  <script src="js/jquery.mobile-1.2.0.min.js"></script>
+  <script src="js/jquery.js"></script>
+
+</head>
+<body>
+
+<div data-role="page" data-theme="b" id="page7">
+      <div data-theme="b" data-role="header" data-position="fixed">
+          <h4>
+              Remember Me
+          </h4>
+                    <div data-role="navbar" data-iconpos="left">
+              <ul>
+                  <li>
+                      <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                          Home
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page7" data-transition="fade" data-theme="" data-icon="plus">
+                          New
+                      </a>
+                  </li>
+                  <li>
+                      <a href="#page4" data-transition="fade" data-theme="" data-icon="grid">
+                          Browse
+                      </a>
+                  </li>
+              </ul>
+          </div>
+      <div data-role="content">
+          <h3>
+              New Post
+          </h3>
+          <form id="newpost" name="newpost" onsubmit="displayconsole()">
+              <div data-role="fieldcontain">
+                  <label for="title">
+                      Title
+                  </label>
+                  <input name="" id="title" placeholder="" value="" type="text">
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="type">
+                      Type:
+                  </label>
+                  <select id="type" id="type" name="" data-mini="true">
+                      <option value="Idea">
+                          Idea
+                      </option>
+                      <option value="Dream">
+                          Dream
+                      </option>
+                      <option value="Life">
+                          Life
+                      </option>
+                      <option value="Poetry">
+                          Poetry
+                      </option>
+                      <option value="Lyrics">
+                          Lyrics
+                      </option>
+                  </select>
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="selectmenu2">
+                      Category:
+                  </label>
+                  <select id="category" name="" data-mini="true">
+                      <option value="Art">
+                          Art
+                      </option>
+                      <option value="Books">
+                          Books
+                      </option>
+                      <option value="Entertainment">
+                          Entertainment
+                      </option>
+                      <option value="Gaming">
+                          Gaming
+                      </option>
+                      <option value="Technology">
+                          Technology
+                      </option>
+                      <option value="Music">
+                          Music
+                      </option>
+                      <option value="Politics">
+                          Politics
+                      </option>
+                      <option value="Science">
+                          Science
+                      </option>
+                      <option value="Religion">
+                          Religion
+                      </option>
+                  </select>
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="date">
+                      Date
+                  </label>
+                  <input name="" id="date" placeholder="" value="" type="date" data-mini="true">
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="slider1">
+                      Significance
+                  </label>
+                  <input id="sig" type="range" name="slider" value="5" min="1" max="10"
+                  data-highlight="true" data-mini="true">
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="textarea1">
+                      Content
+                  </label>
+                  <textarea name="" id="content" placeholder=""></textarea>
+              </div>
+              <div data-role="fieldcontain">
+                  <label for="fav">
+                      Favorite?
+                  </label>
+                  <select name="toggleswitch1" id="fav" data-theme="b" data-role="slider"
+                  data-mini="true">
+                      <option value="false">
+                          Off
+                      </option>
+                      <option value="true">
+                          On
+                      </option>
+                  </select>
+              </div>
+              <input id="submit" type="submit" data-inline="true" data-icon="check"
+              data-iconpos="left" value="Submit">
+              <input id ="subme" class="button" type="button" value="Submit">
+              <a data-role="button" data-inline="true" data-rel="back" href="#page1"
+              data-icon="delete" data-iconpos="left">
+                  Cancel
+              </a>
+          </form>
+      </div>
+      <div data-role="tabbar" data-iconpos="left" data-theme="a">
+          <ul>
+              <li>
+                  <a href="#page5" data-transition="fade" data-theme="" data-icon="info">
+                      About
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
